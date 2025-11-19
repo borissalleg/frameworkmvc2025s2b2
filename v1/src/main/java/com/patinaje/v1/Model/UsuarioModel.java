@@ -8,6 +8,7 @@ import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import jakarta.persistence.Column;
 
 @Entity
 @Table(name = "tbl_usuarios")
@@ -19,7 +20,10 @@ public class UsuarioModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long IdUsuario;
 
+    @Column(name = "nombre", nullable = true, length = 50)
     String NombreUsuario;
+
+    @Column(name = "contraseña", nullable = true, length = 50)
     String Contrasena; 
     
 }
