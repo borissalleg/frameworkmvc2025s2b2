@@ -6,10 +6,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/usuarios")
 public class UsuariosController {
-    
+    @Autowired
+    UsuarioServiceImp usuarioServiceImp;
+
+
     @RequestMapping({"/listar"})
-    public String listarUsuarios() {
-        return "test";
+    public String listarUsuarios(Model model) {
+        model.addAttribute("usuarios", usuarioServiceImp.mostrarTodos());
+        return "listarusuarios";
     }
     
 }
