@@ -21,9 +21,9 @@
         <tbody>
             <!-- Thymeleaf itera sobre la lista "usuarios" -->
             <tr th:each="usuario : ${usuarios}">
-                <td th:text="${usuario.id}"></td>
-                <td th:text="${usuario.name}"></td>
-                <td th:text="${usuario.contraseña}"></td>
+                <td th:text="${usuario.IdUsuario}"></td>
+                <td th:text="${usuario.NombreUsuario}"></td>
+                <td th:text="${usuario.contrasena}"></td>
             </tr>
         </tbody>
     </table>
